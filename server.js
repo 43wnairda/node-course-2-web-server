@@ -2,6 +2,7 @@ const express = require('express');
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;     //This is an environment variable set by Heroku or 3000 if not.
 var app = express();
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -67,6 +68,6 @@ app.get('/bad', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-  console.log('Servder is up on port 3000');
+app.listen(port, () => {                          //see package.json..Heroku needs the "start" script.
+  console.log(`ervder is up on port: ${port}`);
 });
