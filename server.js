@@ -69,5 +69,5 @@ app.get('/bad', (req, res) => {
 
 
 app.listen(port, () => {                          //see package.json..Heroku needs the "start" script.
-  console.log(`ervder is up on port: ${port}`);
+  console.log(`server is up on port: ${port}`);
 });
