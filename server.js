@@ -61,6 +61,15 @@ app.get('/about', (req, res) => {
         });
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {              //using Handlebars to inject values into a static web page
+          pageTitle: 'Projects page',
+          bodyTitle: 'Projects list',
+          welcomeMessage: 'We hope you enjoyed your Prince II controlled project'
+          //currentYear: new Date().getFullYear()               replaced by a register helper
+        });
+    });
+
 app.get('/bad', (req, res) => {
   res.send({
     ErrorMessage: 'Bad request'
